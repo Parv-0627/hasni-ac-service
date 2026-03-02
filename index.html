@@ -1,473 +1,263 @@
-<img src="hero.png" style="width:300px;border:5px solid red;">
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hasni AC Service - Gurgaon & Delhi NCR</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hasni AC Service</title>
 
-  <style>
-    :root{
-      --brand:#e65100;
-      --brand2:#0b63ce;
-      --wa:#25D366;
-      --bg:#f5f1ea;
-      --card:#ffffff;
-      --text:#222;
-      --muted:#666;
-      --shadow:0 10px 25px rgba(0,0,0,.08);
-      --radius:14px;
-    }
+<style>
+body{
+margin:0;
+font-family:Arial, sans-serif;
+background:#f5f1ea;
+}
 
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family: Arial, sans-serif;
-      background:var(--bg);
-      color:var(--text);
-    }
+/* TOP BAR */
+.topbar{
+background:#fff;
+padding:15px 20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+box-shadow:0 2px 8px rgba(0,0,0,0.05);
+}
 
-    /* Topbar */
-    .topbar{
-      background: linear-gradient(90deg,#f7e8d6,#ffffff);
-      padding:14px 18px;
-      position:sticky;
-      top:0;
-      z-index:50;
-      border-bottom:1px solid rgba(0,0,0,.06);
-    }
+.logo{
+font-weight:900;
+color:#e65100;
+font-size:22px;
+}
 
-    .topbar-inner{
-      max-width:1100px;
-      margin:auto;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:12px;
-      flex-wrap:wrap;
-    }
+.logo span{
+display:block;
+font-size:13px;
+color:#777;
+font-weight:600;
+}
 
-    /* Text Logo */
-    .logo{
-      display:flex;
-      align-items:center;
-      gap:10px;
-      font-weight:900;
-      letter-spacing:.3px;
-      color:var(--brand);
-      font-size:22px;
-      text-transform:uppercase;
-    }
-    .logo-badge{
-      width:36px;height:36px;border-radius:10px;
-      background:var(--brand);
-      display:grid;place-items:center;
-      color:#fff;font-weight:900;
-      box-shadow:var(--shadow);
-      flex:0 0 auto;
-    }
-    .logo small{
-      display:block;
-      font-weight:700;
-      color:#a53a00;
-      font-size:12px;
-      letter-spacing:.5px;
-      margin-top:2px;
-    }
+.actions{
+display:flex;
+gap:10px;
+}
 
-    /* Buttons */
-    .actions{
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
-      justify-content:flex-end;
-    }
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      gap:8px;
-      padding:12px 16px;
-      text-decoration:none;
-      border-radius:12px;
-      font-weight:800;
-      color:#fff;
-      box-shadow:var(--shadow);
-      border:0;
-      cursor:pointer;
-      white-space:nowrap;
-    }
-    .btn-call{background:var(--brand)}
-    .btn-call:hover{filter:brightness(.95)}
-    .btn-wa{background:var(--wa)}
-    .btn-wa:hover{filter:brightness(.95)}
-    .btn-book{background:var(--brand2)}
-    .btn-book:hover{filter:brightness(.95)}
+.btn{
+padding:10px 18px;
+border-radius:8px;
+color:#fff;
+text-decoration:none;
+font-weight:bold;
+}
 
-    /* Layout */
-    .container{
-      max-width:1100px;
-      margin:22px auto 60px;
-      padding:0 16px;
-    }
+.btn-call{background:#e65100;}
+.btn-wa{background:#25D366;}
+.btn-book{background:#1565c0;}
 
-    .hero{
-      display:grid;
-      grid-template-columns: 1.4fr 1fr;
-      gap:18px;
-      align-items:stretch;
-    }
+/* TOP BANNER */
+.top-banner img{
+width:100%;
+height:350px;
+object-fit:cover;
+display:block;
+}
 
-    .hero-left, .hero-right{
-      background:var(--card);
-      border-radius:var(--radius);
-      box-shadow:var(--shadow);
-      overflow:hidden;
-    }
+/* MAIN SECTION */
+.container{
+max-width:1100px;
+margin:30px auto;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
+padding:0 15px;
+}
 
-    /* Hero Image */
-    .hero-image{
-      width:100%;
-      height:260px;
-      background:#ddd;
-      display:block;
-      object-fit:cover;
-    }
+.hero-box{
+background:#fff;
+border-radius:12px;
+overflow:hidden;
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
 
-    .hero-content{
-      padding:18px;
-    }
-    .headline{
-      font-size:26px;
-      margin:0 0 6px;
-      color:#b74100;
-      line-height:1.2;
-      font-weight:900;
-    }
-    .subline{
-      margin:0 0 14px;
-      color:var(--muted);
-      font-size:15px;
-      line-height:1.6;
-    }
+.hero-image{
+width:100%;
+height:300px;
+object-fit:cover;
+display:block;
+}
 
-    .pill-row{
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
-      margin-top:10px;
-    }
-    .pill{
-      padding:9px 12px;
-      border-radius:999px;
-      background:#fff4ec;
-      color:#8a2f00;
-      border:1px solid rgba(230,81,0,.15);
-      font-weight:800;
-      font-size:13px;
-    }
+.hero-content{
+padding:20px;
+}
 
-    /* Right Booking Card */
-    .right-inner{
-      padding:18px;
-    }
-    .card-title{
-      margin:0 0 12px;
-      font-size:20px;
-      color:#8a2f00;
-      font-weight:900;
-    }
+.hero-content h2{
+color:#e65100;
+margin-top:0;
+}
 
-    .contact-line{
-      display:flex;
-      align-items:center;
-      gap:10px;
-      padding:10px 12px;
-      border-radius:12px;
-      background:#faf7f3;
-      border:1px solid rgba(0,0,0,.06);
-      margin-bottom:10px;
-      font-weight:800;
-    }
-    .contact-line span{
-      color:var(--muted);
-      font-weight:700;
-    }
+.booking{
+background:#fff;
+padding:20px;
+border-radius:12px;
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
 
-    form{
-      margin-top:12px;
-      display:grid;
-      gap:10px;
-    }
-    input, select, textarea{
-      width:100%;
-      padding:12px 12px;
-      border:1px solid #ddd;
-      border-radius:12px;
-      outline:none;
-      font-size:14px;
-      background:#fff;
-    }
-    textarea{min-height:90px; resize:vertical}
-    .submit{
-      background:var(--brand);
-      color:#fff;
-      padding:12px 14px;
-      border:0;
-      border-radius:12px;
-      font-weight:900;
-      cursor:pointer;
-      box-shadow:var(--shadow);
-    }
-    .submit:hover{filter:brightness(.95)}
-    .note{
-      margin:10px 0 0;
-      font-size:12px;
-      color:var(--muted);
-      line-height:1.5;
-    }
+.booking h3{
+color:#e65100;
+margin-top:0;
+}
 
-    /* Sections */
-    .section{
-      margin-top:18px;
-      background:var(--card);
-      border-radius:var(--radius);
-      box-shadow:var(--shadow);
-      padding:18px;
-    }
-    .section h2{
-      margin:0 0 12px;
-      color:#8a2f00;
-      font-size:20px;
-    }
+input, select, textarea{
+width:100%;
+padding:10px;
+margin-bottom:10px;
+border-radius:6px;
+border:1px solid #ccc;
+}
 
-    .grid-3{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:12px;
-    }
-    .service{
-      border:1px solid rgba(0,0,0,.08);
-      border-radius:14px;
-      padding:14px;
-      background:#fff;
-    }
-    .service b{display:block;margin-bottom:6px}
-    .service p{margin:0;color:var(--muted);font-size:13px;line-height:1.5}
+button{
+background:#e65100;
+color:#fff;
+padding:10px;
+border:none;
+border-radius:6px;
+font-weight:bold;
+cursor:pointer;
+width:100%;
+}
 
-    .prices{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap:10px;
-      margin-top:10px;
-    }
-    .price-item{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      padding:12px 12px;
-      border-radius:12px;
-      background:#faf7f3;
-      border:1px solid rgba(0,0,0,.06);
-      font-weight:900;
-    }
-    .price-item span{color:var(--muted);font-weight:800}
+/* SERVICES */
+.section{
+max-width:1100px;
+margin:20px auto;
+background:#fff;
+padding:20px;
+border-radius:12px;
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
 
-    .areas{
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
-      margin-top:10px;
-    }
-    .area{
-      background:#fff4ec;
-      border:1px solid rgba(230,81,0,.15);
-      color:#8a2f00;
-      font-weight:900;
-      padding:10px 12px;
-      border-radius:999px;
-      font-size:13px;
-    }
+.prices{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:10px;
+margin-top:10px;
+}
 
-    /* Responsive */
-    @media(max-width:900px){
-      .hero{grid-template-columns:1fr}
-      .grid-3{grid-template-columns:1fr}
-      .prices{grid-template-columns:1fr}
-      .headline{font-size:22px}
-      .actions{justify-content:flex-start}
-    }
-  </style>
+.price{
+background:#f9f4ef;
+padding:10px;
+border-radius:8px;
+font-weight:bold;
+}
+
+/* Responsive */
+@media(max-width:900px){
+.container{
+grid-template-columns:1fr;
+}
+.top-banner img{
+height:220px;
+}
+}
+</style>
 </head>
 
 <body>
 
-  <!-- TOPBAR -->
-  <div class="topbar">
-    <div class="topbar-inner">
-      <div class="logo">
-        <div class="logo-badge">H</div>
-        <div>
-          Hasni AC Service
-          <small>Gurgaon • Delhi NCR • Noida • Ghaziabad</small>
-        </div>
-      </div>
+<!-- TOPBAR -->
+<div class="topbar">
+<div class="logo">
+HASNI AC SERVICE
+<span>GURGAON • DELHI NCR • NOIDA • GHAZIABAD</span>
+</div>
 
-      <div class="actions">
-        <!-- FIXED: Call Now -->
-        <a class="btn btn-call" href="tel:+918512064371">📞 Call Now</a>
+<div class="actions">
+<a href="tel:+918512064371" class="btn btn-call">Call Now</a>
+<a href="https://wa.me/918512064371" target="_blank" class="btn btn-wa">WhatsApp</a>
+<a href="#book" class="btn btn-book">Book Now</a>
+</div>
+</div>
 
-        <!-- FIXED: WhatsApp -->
-        <a class="btn btn-wa" href="https://wa.me/918512064371" target="_blank" rel="noopener">💬 WhatsApp</a>
+<!-- TOP BANNER -->
+<div class="top-banner">
+<img src="banner-image.png" alt="Hasni AC Service Banner">
+</div>
 
-        <!-- FIXED: Book Now Scroll -->
-        <a class="btn btn-book" href="#book">📝 Book Now</a>
-      </div>
-    </div>
-  </div>
+<!-- HERO + BOOKING -->
+<div class="container">
 
-  <div class="container">
+<div class="hero-box">
+<img src="hero.png" class="hero-image" alt="AC Fridge Washing Machine Technician">
 
-    <!-- HERO (Image + Intro) -->
-    <div class="hero">
+<div class="hero-content">
+<h2>Fast & Reliable Repair Service</h2>
+<p>
+Professional <b>AC Service</b>, <b>Fridge Repair</b> &
+<b>Washing Machine Repair</b>.
+Same Day Service • Expert Technicians • Affordable Pricing.
+</p>
+</div>
+</div>
 
-      <div class="hero-left">
-        <!-- Put your technician image here (same folder). Rename to hero.jpg -->
-        <img class="hero-image" src="hero.png" alt="AC, Fridge & Washing Machine Repair Technician">
+<div class="booking" id="book">
+<h3>Book Your Service Today</h3>
 
-        <div class="hero-content">
-          <h1 class="headline">Fast & Reliable Repair Service</h1>
-          <p class="subline">
-            Professional <b>AC Service</b>, <b>Fridge Repair</b> & <b>Washing Machine Repair</b>.
-            Same day service • Expert technicians • Affordable pricing.
-          </p>
+<p><b>Call:</b> +91 8512064371</p>
+<p><b>Timing:</b> 9 AM – 9 PM</p>
 
-          <div class="pill-row">
-            <div class="pill">✅ 10+ Years Experience</div>
-            <div class="pill">✅ All Brands Supported</div>
-            <div class="pill">✅ Same Day Service</div>
-            <div class="pill">✅ 24/7 Emergency</div>
-          </div>
-        </div>
-      </div>
+<form id="bookingForm">
+<input type="text" id="name" placeholder="Your Name" required>
+<input type="tel" id="phone" placeholder="Your Phone Number" required>
 
-      <!-- BOOKING / CONTACT -->
-      <div class="hero-right" id="book">
-        <div class="right-inner">
-          <h2 class="card-title">Book Your Service Today</h2>
+<select id="service" required>
+<option value="">Select Service</option>
+<option>AC Service</option>
+<option>AC Installation</option>
+<option>Gas Refill</option>
+<option>Fridge Repair</option>
+<option>Washing Machine Repair</option>
+</select>
 
-          <div class="contact-line">📞 <span>Call:</span> +91 8512064371</div>
-          <div class="contact-line">💬 <span>WhatsApp:</span> +91 8512064371</div>
-          <div class="contact-line">🕘 <span>Timing:</span> 9 AM – 9 PM</div>
+<textarea id="message" placeholder="Your Problem (optional)"></textarea>
 
-          <form id="bookingForm">
-            <input id="name" type="text" placeholder="Your Name" required />
-            <input id="phone" type="tel" placeholder="Your Phone Number" required />
+<button type="submit">Submit Booking (WhatsApp)</button>
+</form>
+</div>
 
-            <select id="service" required>
-              <option value="">Select Service</option>
-              <option>AC Service / Repair</option>
-              <option>AC Installation</option>
-              <option>Gas Refill</option>
-              <option>Fridge Repair</option>
-              <option>Washing Machine Repair</option>
-              <option>AMC Plan</option>
-            </select>
+</div>
 
-            <textarea id="msg" placeholder="Your Problem (optional)"></textarea>
+<!-- SERVICES -->
+<div class="section">
+<h3>Starting Prices</h3>
 
-            <button class="submit" type="submit">Submit Booking (WhatsApp)</button>
-            <p class="note">
-              * Submit pe click karte hi WhatsApp open hoga aur message ready rahega.  
-              (Final price inspection ke baad.)
-            </p>
-          </form>
-        </div>
-      </div>
+<div class="prices">
+<div class="price">AC Service – ₹499</div>
+<div class="price">Gas Refill – ₹1499</div>
+<div class="price">Installation – ₹999</div>
+<div class="price">Visit Charge – ₹249</div>
+</div>
 
-    </div>
+<p style="font-size:13px;color:#777;margin-top:10px;">
+* Final price inspection ke baad confirm hoga.
+</p>
+</div>
 
-    <!-- SERVICES -->
-    <div class="section">
-      <h2>Our Services</h2>
-      <div class="grid-3">
-        <div class="service">
-          <b>🧊 AC Service & Repair</b>
-          <p>Split/Window AC service, cooling issue, leakage, PCB repair, maintenance.</p>
-        </div>
-        <div class="service">
-          <b>🥶 Fridge Repair</b>
-          <p>Cooling issue, gas leakage, compressor, thermostat, sensor problems.</p>
-        </div>
-        <div class="service">
-          <b>🧺 Washing Machine Repair</b>
-          <p>Drum issue, noise, water drainage, motor/belt, spin problem, installation.</p>
-        </div>
-      </div>
-    </div>
+<script>
+document.getElementById("bookingForm").addEventListener("submit", function(e){
+e.preventDefault();
 
-    <!-- PRICES -->
-    <div class="section">
-      <h2>Starting Prices</h2>
-      <div class="prices">
-        <div class="price-item"><span>AC Service</span> ₹499</div>
-        <div class="price-item"><span>Gas Refill</span> ₹1499</div>
-        <div class="price-item"><span>Installation</span> ₹999</div>
-        <div class="price-item"><span>Visit Charge</span> ₹249</div>
-      </div>
-      <p class="note">* Final price inspection ke baad confirm hoga.</p>
-    </div>
+var name=document.getElementById("name").value;
+var phone=document.getElementById("phone").value;
+var service=document.getElementById("service").value;
+var message=document.getElementById("message").value;
 
-    <!-- AREAS -->
-    <div class="section">
-      <h2>Service Areas</h2>
-      <div class="areas">
-        <div class="area">📍 Gurgaon</div>
-        <div class="area">📍 Delhi NCR</div>
-        <div class="area">📍 Noida</div>
-        <div class="area">📍 Ghaziabad</div>
-      </div>
-    </div>
+var text="Hello Hasni AC Service,%0AName: "+name+
+"%0APhone: "+phone+
+"%0AService: "+service+
+"%0AProblem: "+message;
 
-  </div>
-
-  <script>
-    // Smooth scroll for Book Now button
-    document.querySelectorAll('a[href^="#"]').forEach(a => {
-      a.addEventListener("click", (e) => {
-        const id = a.getAttribute("href");
-        const target = document.querySelector(id);
-        if(target){
-          e.preventDefault();
-          target.scrollIntoView({ behavior: "smooth", block: "start" });
-        }
-      });
-    });
-
-    // Booking Form -> WhatsApp message (no backend needed)
-    const form = document.getElementById("bookingForm");
-    form.addEventListener("submit", (e) => {
-      e.preventDefault();
-
-      const name = document.getElementById("name").value.trim();
-      const phone = document.getElementById("phone").value.trim();
-      const service = document.getElementById("service").value.trim();
-      const msg = document.getElementById("msg").value.trim();
-
-      const text =
-`Hello Hasni AC Service,
-Name: ${name}
-Phone: ${phone}
-Service: ${service}
-Problem: ${msg || "N/A"}
-Location: Gurgaon/Delhi NCR`;
-
-      const waNumber = "918512064371";
-      const url = `https://wa.me/${waNumber}?text=${encodeURIComponent(text)}`;
-      window.open(url, "_blank");
-    });
-  </script>
+window.open("https://wa.me/918512064371?text="+text, "_blank");
+});
+</script>
 
 </body>
 </html>
