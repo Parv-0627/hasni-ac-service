@@ -6,158 +6,127 @@
 <title>Hasni AC Service</title>
 
 <style>
-body{
-margin:0;
-font-family:Arial, sans-serif;
-background:#f5f1ea;
-}
+  body{margin:0;font-family:Arial,sans-serif;background:#f5f1ea}
 
-/* TOP BAR */
-.topbar{
-background:#fff;
-padding:15px 20px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-flex-wrap:wrap;
-box-shadow:0 2px 8px rgba(0,0,0,0.05);
-}
+  /* TOP BAR */
+  .topbar{
+    background:#fff;
+    padding:15px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:12px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.05);
+    position:sticky; top:0; z-index:50;
+  }
+  .logo{font-weight:900;color:#e65100;font-size:22px}
+  .logo span{display:block;font-size:13px;color:#777;font-weight:600;margin-top:2px}
+  .actions{display:flex;gap:10px;flex-wrap:wrap}
+  .btn{
+    padding:10px 18px;border-radius:10px;color:#fff;text-decoration:none;
+    font-weight:bold; display:inline-flex; align-items:center; gap:8px;
+  }
+  .btn-call{background:#e65100}
+  .btn-wa{background:#25D366}
+  .btn-book{background:#1565c0}
 
-.logo{
-font-weight:900;
-color:#e65100;
-font-size:22px;
-}
+  /* FULLPAGE IMAGE */
+  .fullpage img{
+    width:100%;
+    height:auto;
+    display:block;
+  }
 
-.logo span{
-display:block;
-font-size:13px;
-color:#777;
-font-weight:600;
-}
+  /* SECTION WRAP */
+  .section{
+    max-width:1100px;
+    margin:22px auto;
+    padding:0 15px;
+  }
+  .card{
+    background:#fff;
+    border-radius:12px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+    overflow:hidden;
+  }
+  .card-inner{padding:18px}
+  h2{margin:0 0 10px;color:#e65100}
+  p{margin:0;color:#444;line-height:1.6}
 
-.actions{
-display:flex;
-gap:10px;
-}
+  /* MAP */
+  .map{
+    margin-top:14px;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+    background:#fff;
+  }
+  .map iframe{width:100%;height:340px;border:0;display:block}
+  .map-title{
+    padding:14px 16px;
+    font-weight:900;
+    color:#e65100;
+    background:#fff;
+    border-bottom:1px solid #eee;
+  }
 
-.btn{
-padding:10px 18px;
-border-radius:8px;
-color:#fff;
-text-decoration:none;
-font-weight:bold;
-}
+  /* MODAL (BOOK FORM) */
+  .modal{
+    position:fixed; inset:0;
+    background:rgba(0,0,0,0.55);
+    display:none;
+    align-items:center;
+    justify-content:center;
+    padding:18px;
+    z-index:999;
+  }
+  .modal.show{display:flex}
+  .modal-box{
+    width:min(720px, 95vw);
+    background:#fff;
+    border-radius:14px;
+    box-shadow:0 10px 35px rgba(0,0,0,0.25);
+    overflow:hidden;
+  }
+  .modal-head{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:14px 16px;
+    background:#fff;
+    border-bottom:1px solid #eee;
+  }
+  .modal-head h3{margin:0;color:#e65100}
+  .close{
+    border:0;background:#f2f2f2;border-radius:10px;
+    padding:8px 12px;cursor:pointer;font-weight:900;
+  }
+  .modal-body{padding:16px}
+  .info{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:10px}
+  .chip{
+    background:#f9f4ef;border:1px solid #eee;border-radius:999px;
+    padding:8px 12px;font-weight:700;color:#333;
+  }
 
-.btn-call{background:#e65100;}
-.btn-wa{background:#25D366;}
-.btn-book{background:#1565c0;}
+  form{display:grid;gap:10px}
+  input,select,textarea{
+    width:100%;
+    padding:11px 12px;
+    border-radius:10px;
+    border:1px solid #ccc;
+    font-size:14px;
+    background:#fff;
+    outline:none;
+  }
+  textarea{min-height:90px;resize:vertical}
+  .submit{
+    background:#e65100;color:#fff;
+    padding:12px;border:0;border-radius:10px;
+    font-weight:900;cursor:pointer;
+  }
 
-/* TOP BANNER */
-.top-banner img{
-width:100%;
-height:350px;
-object-fit:cover;
-display:block;
-}
-
-/* MAIN SECTION */
-.container{
-max-width:1100px;
-margin:30px auto;
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:20px;
-padding:0 15px;
-}
-
-.hero-box{
-background:#fff;
-border-radius:12px;
-overflow:hidden;
-box-shadow:0 5px 20px rgba(0,0,0,0.08);
-}
-
-.hero-image{
-width:100%;
-height:300px;
-object-fit:cover;
-display:block;
-}
-
-.hero-content{
-padding:20px;
-}
-
-.hero-content h2{
-color:#e65100;
-margin-top:0;
-}
-
-.booking{
-background:#fff;
-padding:20px;
-border-radius:12px;
-box-shadow:0 5px 20px rgba(0,0,0,0.08);
-}
-
-.booking h3{
-color:#e65100;
-margin-top:0;
-}
-
-input, select, textarea{
-width:100%;
-padding:10px;
-margin-bottom:10px;
-border-radius:6px;
-border:1px solid #ccc;
-}
-
-button{
-background:#e65100;
-color:#fff;
-padding:10px;
-border:none;
-border-radius:6px;
-font-weight:bold;
-cursor:pointer;
-width:100%;
-}
-
-/* SERVICES */
-.section{
-max-width:1100px;
-margin:20px auto;
-background:#fff;
-padding:20px;
-border-radius:12px;
-box-shadow:0 5px 20px rgba(0,0,0,0.08);
-}
-
-.prices{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:10px;
-margin-top:10px;
-}
-
-.price{
-background:#f9f4ef;
-padding:10px;
-border-radius:8px;
-font-weight:bold;
-}
-
-/* Responsive */
-@media(max-width:900px){
-.container{
-grid-template-columns:1fr;
-}
-.top-banner img{
-height:220px;
-}
-}
+  @media(max-width:700px){
+    .map iframe{height:280px}
+  }
 </style>
 </head>
 
@@ -165,98 +134,118 @@ height:220px;
 
 <!-- TOPBAR -->
 <div class="topbar">
-<div class="logo">
-HASNI AC SERVICE
-<span>GURGAON • DELHI NCR • NOIDA • GHAZIABAD</span>
+  <div class="logo">
+    HASNI AC SERVICE
+    <span>GURGAON • DELHI NCR • NOIDA • GHAZIABAD</span>
+  </div>
+
+  <div class="actions">
+    <a href="tel:+918512064371" class="btn btn-call">📞 Call Now</a>
+    <a href="https://wa.me/918512064371" target="_blank" class="btn btn-wa">💬 WhatsApp</a>
+
+    <!-- Book Now -> opens popup -->
+    <a href="#" class="btn btn-book" id="openBook">📝 Book Now</a>
+  </div>
 </div>
 
-<div class="actions">
-<a href="tel:+918512064371" class="btn btn-call">Call Now</a>
-<a href="https://wa.me/918512064371" target="_blank" class="btn btn-wa">WhatsApp</a>
-<a href="#book" class="btn btn-book">Book Now</a>
-</div>
+<!-- 1) FULL PAGE IMAGE -->
+<div class="fullpage">
+  <img src="1-fullpage.png" alt="Hasni AC Service Full Page">
 </div>
 
-<!-- TOP BANNER -->
-<div class="top-banner">
-<img src="banner-image.png" alt="Hasni AC Service Banner">
-</div>
-
-<!-- HERO + BOOKING -->
-<div class="container">
-
-<div class="hero-box">
-<img src="hero.png" class="hero-image" alt="AC Fridge Washing Machine Technician">
-
-<div class="hero-content">
-<h2>Fast & Reliable Repair Service</h2>
-<p>
-Professional <b>AC Service</b>, <b>Fridge Repair</b> &
-<b>Washing Machine Repair</b>.
-Same Day Service • Expert Technicians • Affordable Pricing.
-</p>
-</div>
-</div>
-
-<div class="booking" id="book">
-<h3>Book Your Service Today</h3>
-
-<p><b>Call:</b> +91 8512064371</p>
-<p><b>Timing:</b> 9 AM – 9 PM</p>
-
-<form id="bookingForm">
-<input type="text" id="name" placeholder="Your Name" required>
-<input type="tel" id="phone" placeholder="Your Phone Number" required>
-
-<select id="service" required>
-<option value="">Select Service</option>
-<option>AC Service</option>
-<option>AC Installation</option>
-<option>Gas Refill</option>
-<option>Fridge Repair</option>
-<option>Washing Machine Repair</option>
-</select>
-
-<textarea id="message" placeholder="Your Problem (optional)"></textarea>
-
-<button type="submit">Submit Booking (WhatsApp)</button>
-</form>
-</div>
-
-</div>
-
-<!-- SERVICES -->
+<!-- 4) LOCATION MAP UNDER FULLPAGE -->
 <div class="section">
-<h3>Starting Prices</h3>
-
-<div class="prices">
-<div class="price">AC Service – ₹499</div>
-<div class="price">Gas Refill – ₹1499</div>
-<div class="price">Installation – ₹999</div>
-<div class="price">Visit Charge – ₹249</div>
+  <div class="map">
+    <div class="map-title">📍 Location: Sector 4, Gurgaon</div>
+    <iframe
+      src="https://www.google.com/maps?q=Sector%204%20Gurgaon&output=embed"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
 </div>
 
-<p style="font-size:13px;color:#777;margin-top:10px;">
-* Final price inspection ke baad confirm hoga.
-</p>
+<!-- (2) Starting Prices section REMOVED -->
+
+<!-- 3) BOOK MODAL -->
+<div class="modal" id="bookModal">
+  <div class="modal-box">
+    <div class="modal-head">
+      <h3>Book Your Service Today</h3>
+      <button class="close" id="closeBook">✕</button>
+    </div>
+
+    <div class="modal-body">
+      <div class="info">
+        <div class="chip">📞 Call: +91 8512064371</div>
+        <div class="chip">🕘 Timing: 9 AM – 9 PM</div>
+        <div class="chip">✅ AC • Fridge • Washing</div>
+      </div>
+
+      <form id="bookingForm">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="tel" id="phone" placeholder="Your Phone Number" required>
+
+        <select id="service" required>
+          <option value="">Select Service</option>
+          <option>AC Service</option>
+          <option>AC Repair</option>
+          <option>AC Installation</option>
+          <option>Gas Refill</option>
+          <option>Fridge Repair</option>
+          <option>Washing Machine Repair</option>
+        </select>
+
+        <textarea id="message" placeholder="Your Problem (optional)"></textarea>
+
+        <button class="submit" type="submit">Submit Booking (WhatsApp)</button>
+      </form>
+
+      <p style="margin-top:10px;font-size:12px;color:#777;line-height:1.5;">
+        * Submit pe click karte hi WhatsApp open hoga aur message ready rahega. (Final price inspection ke baad.)
+      </p>
+    </div>
+  </div>
 </div>
 
 <script>
-document.getElementById("bookingForm").addEventListener("submit", function(e){
-e.preventDefault();
+  // Open / close modal
+  const openBtn = document.getElementById("openBook");
+  const modal = document.getElementById("bookModal");
+  const closeBtn = document.getElementById("closeBook");
 
-var name=document.getElementById("name").value;
-var phone=document.getElementById("phone").value;
-var service=document.getElementById("service").value;
-var message=document.getElementById("message").value;
+  openBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    modal.classList.add("show");
+  });
 
-var text="Hello Hasni AC Service,%0AName: "+name+
-"%0APhone: "+phone+
-"%0AService: "+service+
-"%0AProblem: "+message;
+  closeBtn.addEventListener("click", () => modal.classList.remove("show"));
 
-window.open("https://wa.me/918512064371?text="+text, "_blank");
-});
+  // Close when clicking outside modal box
+  modal.addEventListener("click", (e) => {
+    if(e.target === modal) modal.classList.remove("show");
+  });
+
+  // Form -> WhatsApp
+  document.getElementById("bookingForm").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const service = document.getElementById("service").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    const text =
+`Hello Hasni AC Service,
+Name: ${name}
+Phone: ${phone}
+Service: ${service}
+Problem: ${message || "N/A"}
+Location: Sector 4, Gurgaon`;
+
+    const url = "https://wa.me/918512064371?text=" + encodeURIComponent(text);
+    window.open(url, "_blank");
+  });
 </script>
 
 </body>
