@@ -1,205 +1,1052 @@
-
-<title>AC Repair Service in Gurgaon | Hasni AC Service 24/7</title>
-
-<meta name="description" content="Best AC repair service in Gurgaon. 24/7 AC service, installation, gas refill, fridge & washing machine repair. Call +91 8512064371">
-
-<meta name="keywords" content="AC repair Gurgaon, AC service near me, AC gas refill Gurgaon, fridge repair Gurgaon">
-
-<meta name="robots" content="index, follow">
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hasni AC Service</title>
+<title>AC Repair Service in Gurgaon | Hasni AC Service 24/7</title>
+<meta name="description" content="Best AC repair service in Gurgaon. 24/7 AC service, installation, gas refill, fridge & washing machine repair. Call +91 8512064371">
+<meta name="keywords" content="AC repair Gurgaon, AC service near me, AC gas refill Gurgaon, fridge repair Gurgaon, washing machine repair Gurgaon">
+<meta name="robots" content="index, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-  body{margin:0;font-family:Arial,sans-serif;background:#f5f1ea}
+:root {
+  --orange: #e65100;
+  --orange-light: #ff7043;
+  --dark: #0f0f0f;
+  --dark2: #1a1a1a;
+  --cream: #faf8f5;
+  --text: #222;
+  --muted: #666;
+  --white: #fff;
+  --green: #25D366;
+  --blue: #1565c0;
+  --radius: 14px;
+}
 
-  /* TOP BAR */
-  .topbar{
-    background:#fff;
-    padding:15px 20px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    flex-wrap:wrap;
-    gap:12px;
-    box-shadow:0 2px 8px rgba(0,0,0,0.05);
-    position:sticky; top:0; z-index:50;
-  }
-  .logo{font-weight:900;color:#e65100;font-size:22px}
-  .logo span{display:block;font-size:13px;color:#777;font-weight:600;margin-top:2px}
-  .actions{display:flex;gap:10px;flex-wrap:wrap}
-  .btn{
-    padding:10px 18px;border-radius:10px;color:#fff;text-decoration:none;
-    font-weight:bold; display:inline-flex; align-items:center; gap:8px;
-  }
-  .btn-call{background:#e65100}
-  .btn-wa{background:#25D366}
-  .btn-book{background:#1565c0}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-  /* FULLPAGE IMAGE */
-  .fullpage img{
-    width:100%;
-    height:auto;
-    display:block;
-  }
+html { scroll-behavior: smooth; }
 
-  /* MODAL (BOOK FORM) */
-  .modal{
-    position:fixed; inset:0;
-    background:rgba(0,0,0,0.55);
-    display:none;
-    align-items:center;
-    justify-content:center;
-    padding:18px;
-    z-index:999;
-  }
-  .modal.show{display:flex}
-  .modal-box{
-    width:min(720px, 95vw);
-    background:#fff;
-    border-radius:14px;
-    box-shadow:0 10px 35px rgba(0,0,0,0.25);
-    overflow:hidden;
-  }
-  .modal-head{
-    display:flex;align-items:center;justify-content:space-between;
-    padding:14px 16px;
-    background:#fff;
-    border-bottom:1px solid #eee;
-  }
-  .modal-head h3{margin:0;color:#e65100}
-  .close{
-    border:0;background:#f2f2f2;border-radius:10px;
-    padding:8px 12px;cursor:pointer;font-weight:900;
-  }
-  .modal-body{padding:16px}
-  .info{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:10px}
-  .chip{
-    background:#f9f4ef;border:1px solid #eee;border-radius:999px;
-    padding:8px 12px;font-weight:700;color:#333;
-  }
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--cream);
+  color: var(--text);
+  overflow-x: hidden;
+}
 
-  form{display:grid;gap:10px}
-  input,select,textarea{
-    width:100%;
-    padding:11px 12px;
-    border-radius:10px;
-    border:1px solid #ccc;
-    font-size:14px;
-    background:#fff;
-    outline:none;
-  }
-  textarea{min-height:90px;resize:vertical}
-  .submit{
-    background:#e65100;color:#fff;
-    padding:12px;border:0;border-radius:10px;
-    font-weight:900;cursor:pointer;
-  }
+/* ── TOPBAR ── */
+.topbar {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(255,255,255,0.97);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.logo-icon {
+  width: 44px; height: 44px;
+  background: var(--orange);
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 22px;
+}
+.logo-text {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 24px;
+  color: var(--orange);
+  letter-spacing: 1px;
+  line-height: 1;
+}
+.logo-sub {
+  font-size: 11px;
+  color: var(--muted);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-top: 2px;
+}
+
+.topbar-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+.btn {
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 14px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  transition: transform .15s, box-shadow .15s;
+  border: none; cursor: pointer;
+  color: white;
+}
+.btn:hover { transform: translateY(-1px); box-shadow: 0 6px 20px rgba(0,0,0,0.18); }
+.btn-call { background: var(--orange); }
+.btn-wa { background: var(--green); }
+.btn-book { background: var(--blue); }
+
+/* ── HERO ── */
+.hero {
+  position: relative;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: var(--dark);
+}
+
+.hero-bg {
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg, #0f0f0f 0%, #1a0a00 50%, #0f0f0f 100%);
+}
+
+.hero-pattern {
+  position: absolute; inset: 0;
+  background-image: 
+    radial-gradient(circle at 20% 50%, rgba(230,81,0,0.15) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(230,81,0,0.08) 0%, transparent 40%);
+}
+
+.hero-image-side {
+  position: absolute;
+  right: 0; top: 0; bottom: 0;
+  width: 55%;
+  overflow: hidden;
+}
+.hero-image-side img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  opacity: 0.45;
+  filter: saturate(0.8);
+}
+.hero-image-side::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(to right, var(--dark) 0%, transparent 60%);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative; z-index: 2;
+  padding: 80px 60px;
+  max-width: 640px;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(230,81,0,0.2);
+  border: 1px solid rgba(230,81,0,0.4);
+  color: #ff7043;
+  padding: 7px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+.hero-badge .dot {
+  width: 7px; height: 7px;
+  background: #ff7043;
+  border-radius: 50%;
+  animation: pulse 1.5s infinite;
+}
+@keyframes pulse {
+  0%,100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.3); }
+}
+
+.hero h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(52px, 7vw, 88px);
+  line-height: 0.95;
+  color: var(--white);
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+.hero h1 span { color: var(--orange-light); }
+
+.hero-desc {
+  font-size: 17px;
+  color: rgba(255,255,255,0.65);
+  line-height: 1.6;
+  margin-bottom: 36px;
+  max-width: 480px;
+}
+
+.hero-prices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 36px;
+}
+.price-tag {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+  color: white;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.price-tag strong { color: var(--orange-light); }
+
+.hero-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.btn-hero-primary {
+  background: var(--orange);
+  color: white;
+  padding: 15px 28px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 16px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all .2s;
+  border: none; cursor: pointer;
+}
+.btn-hero-primary:hover { background: var(--orange-light); transform: translateY(-2px); }
+.btn-hero-wa {
+  background: var(--green);
+  color: white;
+  padding: 15px 28px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 16px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all .2s;
+}
+.btn-hero-wa:hover { filter: brightness(1.1); transform: translateY(-2px); }
+
+/* ── TRUST BAR ── */
+.trustbar {
+  background: var(--orange);
+  padding: 16px 24px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.trust-item {
+  color: white;
+  font-weight: 700;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ── SECTION ── */
+section { padding: 80px 24px; }
+.container { max-width: 1100px; margin: 0 auto; }
+
+.section-label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 10px;
+}
+.section-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(36px, 5vw, 54px);
+  line-height: 1;
+  color: var(--dark);
+  margin-bottom: 14px;
+  letter-spacing: 0.5px;
+}
+.section-sub {
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: 520px;
+  margin-bottom: 48px;
+}
+
+/* ── SERVICES ── */
+.services-bg { background: var(--white); }
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.service-card {
+  background: var(--cream);
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  transition: all .25s;
+  position: relative;
+  overflow: hidden;
+}
+.service-card::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--orange);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .3s;
+}
+.service-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(0,0,0,0.1); }
+.service-card:hover::before { transform: scaleX(1); }
+
+.service-icon {
+  font-size: 36px;
+  margin-bottom: 14px;
+  display: block;
+}
+.service-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--dark);
+}
+.service-card p {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.5;
+  margin-bottom: 14px;
+}
+.service-price {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--orange);
+}
+.service-price span { font-size: 13px; color: var(--muted); font-weight: 500; }
+
+/* ── GALLERY ── */
+.gallery-bg { background: var(--dark); }
+.gallery-bg .section-title { color: white; }
+.gallery-bg .section-label { color: var(--orange-light); }
+.gallery-bg .section-sub { color: rgba(255,255,255,0.5); }
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 12px;
+}
+.gallery-item {
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+}
+.gallery-item:first-child {
+  grid-row: span 2;
+}
+.gallery-item img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .4s;
+}
+.gallery-item:hover img { transform: scale(1.04); }
+.gallery-item::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(230,81,0,0.5) 0%, transparent 50%);
+  opacity: 0;
+  transition: opacity .3s;
+}
+.gallery-item:hover::after { opacity: 1; }
+
+/* ── WHY US ── */
+.why-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+.why-image {
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+.why-image img {
+  width: 100%; height: 480px;
+  object-fit: cover;
+  display: block;
+}
+.why-image-badge {
+  position: absolute;
+  bottom: 24px; left: 24px;
+  background: var(--orange);
+  color: white;
+  padding: 14px 20px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 15px;
+}
+.why-image-badge strong {
+  display: block;
+  font-size: 28px;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 1px;
+}
+
+.why-points {
+  display: grid;
+  gap: 20px;
+}
+.why-point {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+.why-icon {
+  width: 48px; height: 48px;
+  min-width: 48px;
+  background: rgba(230,81,0,0.1);
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 22px;
+}
+.why-point h4 { font-weight: 700; font-size: 16px; margin-bottom: 4px; }
+.why-point p { font-size: 14px; color: var(--muted); line-height: 1.5; }
+
+/* ── AREAS ── */
+.areas-bg { background: var(--white); }
+
+.areas-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.area-pill {
+  background: var(--cream);
+  border: 1px solid rgba(0,0,0,0.08);
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--dark);
+  transition: all .2s;
+}
+.area-pill:hover {
+  background: var(--orange);
+  color: white;
+  border-color: var(--orange);
+}
+
+/* ── CTA ── */
+.cta-section {
+  background: var(--orange);
+  padding: 80px 24px;
+  text-align: center;
+}
+.cta-section h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(40px, 6vw, 72px);
+  color: white;
+  margin-bottom: 12px;
+  letter-spacing: 1px;
+}
+.cta-section p {
+  color: rgba(255,255,255,0.8);
+  font-size: 17px;
+  margin-bottom: 36px;
+}
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.btn-cta-white {
+  background: white;
+  color: var(--orange);
+  padding: 16px 32px;
+  border-radius: 12px;
+  font-weight: 800;
+  font-size: 16px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all .2s;
+  border: none; cursor: pointer;
+}
+.btn-cta-white:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+.btn-cta-dark {
+  background: rgba(0,0,0,0.25);
+  color: white;
+  border: 2px solid rgba(255,255,255,0.4);
+  padding: 16px 32px;
+  border-radius: 12px;
+  font-weight: 800;
+  font-size: 16px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all .2s;
+}
+.btn-cta-dark:hover { background: rgba(0,0,0,0.35); transform: translateY(-2px); }
+
+/* ── FOOTER ── */
+footer {
+  background: var(--dark);
+  color: rgba(255,255,255,0.6);
+  padding: 48px 24px 24px;
+}
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+.footer-brand .logo-text { color: white; font-size: 28px; }
+.footer-brand .logo-sub { color: rgba(255,255,255,0.4); }
+.footer-brand p { font-size: 14px; line-height: 1.6; margin-top: 14px; }
+footer h4 {
+  color: white;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+footer ul { list-style: none; display: grid; gap: 10px; }
+footer ul li a, footer ul li {
+  font-size: 14px;
+  color: rgba(255,255,255,0.5);
+  text-decoration: none;
+  transition: color .2s;
+}
+footer ul li a:hover { color: var(--orange-light); }
+.footer-bottom {
+  max-width: 1100px; margin: 0 auto;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 13px;
+}
+.footer-bottom a { color: var(--orange-light); text-decoration: none; }
+
+/* ── MODAL ── */
+.modal {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+  z-index: 999;
+  backdrop-filter: blur(4px);
+}
+.modal.show { display: flex; }
+.modal-box {
+  width: min(560px, 95vw);
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  overflow: hidden;
+  animation: slideUp .25s ease;
+}
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.modal-head {
+  background: var(--orange);
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.modal-head h3 { color: white; font-size: 20px; font-weight: 800; }
+.modal-close {
+  background: rgba(255,255,255,0.2);
+  border: none;
+  color: white;
+  width: 36px; height: 36px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 900;
+  display: flex; align-items: center; justify-content: center;
+  transition: background .2s;
+}
+.modal-close:hover { background: rgba(255,255,255,0.35); }
+.modal-body { padding: 24px; }
+.chips-row { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px; }
+.chip {
+  background: #fef3ee;
+  border: 1px solid #fbd5c0;
+  color: var(--orange);
+  padding: 7px 13px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+}
+.form-group { margin-bottom: 14px; }
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1.5px solid #e5e5e5;
+  border-radius: 10px;
+  font-size: 14px;
+  font-family: inherit;
+  background: #fafafa;
+  outline: none;
+  transition: border-color .2s;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus { border-color: var(--orange); background: white; }
+.form-group textarea { min-height: 90px; resize: vertical; }
+.btn-submit {
+  width: 100%;
+  background: var(--orange);
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background .2s;
+  font-family: inherit;
+}
+.btn-submit:hover { background: var(--orange-light); }
+.form-note {
+  margin-top: 10px;
+  font-size: 12px;
+  color: var(--muted);
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* ── FLOAT WA ── */
+.float-wa {
+  position: fixed;
+  bottom: 24px; right: 24px;
+  z-index: 90;
+  width: 58px; height: 58px;
+  background: var(--green);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 28px;
+  box-shadow: 0 6px 24px rgba(37,211,102,0.5);
+  text-decoration: none;
+  transition: transform .2s;
+  animation: floatBounce 3s ease-in-out infinite;
+}
+.float-wa:hover { transform: scale(1.1); }
+@keyframes floatBounce {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .hero-image-side { width: 100%; opacity: 0.15; }
+  .hero-content { padding: 60px 24px; max-width: 100%; }
+  .gallery-grid { grid-template-columns: 1fr 1fr; }
+  .gallery-item:first-child { grid-row: span 1; }
+  .why-grid { grid-template-columns: 1fr; }
+  .why-image { display: none; }
+  .footer-inner { grid-template-columns: 1fr; gap: 24px; }
+}
 </style>
 </head>
-
 <body>
 
 <!-- TOPBAR -->
 <div class="topbar">
   <div class="logo">
-    HASNI AC SERVICE
-    <span>GURGAON • DELHI NCR • NOIDA • GHAZIABAD</span>
+    <div class="logo-icon">❄️</div>
+    <div>
+      <div class="logo-text">HASNI AC SERVICE</div>
+      <div class="logo-sub">GURGAON • DELHI NCR • NOIDA • GHAZIABAD</div>
+    </div>
   </div>
-
-  <div class="actions">
+  <div class="topbar-actions">
     <a href="tel:+918512064371" class="btn btn-call">📞 Call Now</a>
     <a href="https://wa.me/918512064371" target="_blank" class="btn btn-wa">💬 WhatsApp</a>
-    <a href="#" class="btn btn-book" id="openBook">📝 Book Now</a>
+    <button class="btn btn-book" id="openBook">📝 Book Now</button>
   </div>
 </div>
 
-<!-- FULL PAGE IMAGE -->
-<div class="fullpage">
-  <img src="fullpage.png" alt="Hasni AC Service Full Page">
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-pattern"></div>
+  <div class="hero-image-side">
+    <img src="aec2a083-5191-4d9b-a2bb-0449778f6533.jpeg" alt="AC technician working">
+  </div>
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span class="dot"></span>
+      Available 24/7 — Same Day Service
+    </div>
+    <h1>
+      AC REPAIR &<br>
+      <span>SERVICE</span><br>
+      GURGAON
+    </h1>
+    <p class="hero-desc">
+      Expert AC repair, gas refill, installation & fridge/washing machine repair across Gurgaon, Delhi NCR, Noida & Ghaziabad.
+    </p>
+    <div class="hero-prices">
+      <div class="price-tag">AC Service <strong>₹499</strong></div>
+      <div class="price-tag">Gas Refill <strong>₹1499</strong></div>
+      <div class="price-tag">Installation <strong>₹999</strong></div>
+      <div class="price-tag">Visit Charge <strong>₹249</strong></div>
+    </div>
+    <div class="hero-buttons">
+      <button class="btn-hero-primary" id="openBook2">📝 Book a Service</button>
+      <a href="https://wa.me/918512064371" target="_blank" class="btn-hero-wa">💬 WhatsApp Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trustbar">
+  <div class="trust-item">✅ 5000+ Happy Customers</div>
+  <div class="trust-item">⚡ Same Day Service</div>
+  <div class="trust-item">🔧 Expert Technicians</div>
+  <div class="trust-item">💰 Best Prices Guaranteed</div>
+  <div class="trust-item">🕐 24/7 Available</div>
 </div>
 
-<!-- BOOK MODAL -->
+<!-- SERVICES -->
+<section class="services-bg">
+  <div class="container">
+    <div class="section-label">What We Fix</div>
+    <h2 class="section-title">Our Services</h2>
+    <p class="section-sub">Professional repair & maintenance for all major appliances at your doorstep.</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <span class="service-icon">❄️</span>
+        <h3>AC Service & Cleaning</h3>
+        <p>Deep cleaning, filter wash, coil cleaning & full performance check-up for all AC brands.</p>
+        <div class="service-price">₹499 <span>onwards</span></div>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">🔧</span>
+        <h3>AC Repair</h3>
+        <p>Not cooling? Strange noise? Compressor issue? We diagnose & fix all AC problems same day.</p>
+        <div class="service-price">₹249 <span>visit charge</span></div>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">💨</span>
+        <h3>Gas Refill (R-22/R-32/R-410A)</h3>
+        <p>Gas leakage detection & refill for all refrigerant types. Genuine gas, transparent pricing.</p>
+        <div class="service-price">₹1499 <span>onwards</span></div>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">🏗️</span>
+        <h3>AC Installation</h3>
+        <p>New AC installation with proper mounting, piping & electrical connection. All brands.</p>
+        <div class="service-price">₹999 <span>onwards</span></div>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">🧊</span>
+        <h3>Fridge Repair</h3>
+        <p>Not cooling, compressor noise, ice buildup — we repair all refrigerator issues quickly.</p>
+        <div class="service-price">₹299 <span>visit charge</span></div>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">🫧</span>
+        <h3>Washing Machine Repair</h3>
+        <p>Front load & top load washing machine repair — drum, motor, PCB, and more.</p>
+        <div class="service-price">₹299 <span>visit charge</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY / WORK PHOTOS -->
+<section class="gallery-bg">
+  <div class="container">
+    <div class="section-label">Our Work</div>
+    <h2 class="section-title" style="color:white">Real Technicians.<br>Real Results.</h2>
+    <p class="section-sub">Our certified experts at work — no stock photos, just real service.</p>
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="c4a4295d-9080-4d9d-974b-de374643eb35.jpeg" alt="AC outdoor unit repair" style="height:500px">
+      </div>
+      <div class="gallery-item">
+        <img src="899a3a52-8c76-47db-8d77-2b9616e18906.jpeg" alt="AC indoor unit repair" style="height:240px">
+      </div>
+      <div class="gallery-item">
+        <img src="aec2a083-5191-4d9b-a2bb-0449778f6533.jpeg" alt="Fridge repair" style="height:240px">
+      </div>
+      <div class="gallery-item" style="grid-column: span 2">
+        <img src="a2112009-9e72-4dab-9246-843e80eb7da0.jpeg" alt="AC gas refill" style="height:240px; object-position: center 30%">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section>
+  <div class="container">
+    <div class="why-grid">
+      <div>
+        <div class="section-label">Why Choose Us</div>
+        <h2 class="section-title">Trusted by<br>5000+ Homes</h2>
+        <p class="section-sub">We're not just technicians — we're your neighbourhood appliance experts.</p>
+        <div class="why-points">
+          <div class="why-point">
+            <div class="why-icon">⚡</div>
+            <div>
+              <h4>Same Day Service</h4>
+              <p>Book before noon, get service today. No waiting, no delays.</p>
+            </div>
+          </div>
+          <div class="why-point">
+            <div class="why-icon">🎓</div>
+            <div>
+              <h4>Certified Technicians</h4>
+              <p>Trained and experienced professionals for all major brands — LG, Samsung, Voltas, Daikin & more.</p>
+            </div>
+          </div>
+          <div class="why-point">
+            <div class="why-icon">💰</div>
+            <div>
+              <h4>Transparent Pricing</h4>
+              <p>No hidden charges. Price confirmed before work begins. What we quote is what you pay.</p>
+            </div>
+          </div>
+          <div class="why-point">
+            <div class="why-icon">🛡️</div>
+            <div>
+              <h4>Service Warranty</h4>
+              <p>30-day service warranty on all repairs. If the problem returns, we come back for free.</p>
+            </div>
+          </div>
+          <div class="why-point">
+            <div class="why-icon">🕐</div>
+            <div>
+              <h4>24/7 Availability</h4>
+              <p>AC broken at midnight? We're available round the clock, 365 days a year.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="why-image">
+        <img src="899a3a52-8c76-47db-8d77-2b9616e18906.jpeg" alt="Expert AC technician">
+        <div class="why-image-badge">
+          <strong>5000+</strong>
+          Happy Customers
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE AREAS -->
+<section class="areas-bg">
+  <div class="container">
+    <div class="section-label">We Come To You</div>
+    <h2 class="section-title">Service Areas</h2>
+    <p class="section-sub">Covering all major areas across Gurgaon, Delhi NCR, Noida & Ghaziabad.</p>
+    <div class="areas-grid">
+      <div class="area-pill">Sector 14 Gurgaon</div>
+      <div class="area-pill">Sector 29</div>
+      <div class="area-pill">DLF Phase 1-5</div>
+      <div class="area-pill">Sohna Road</div>
+      <div class="area-pill">MG Road</div>
+      <div class="area-pill">Golf Course Road</div>
+      <div class="area-pill">Palam Vihar</div>
+      <div class="area-pill">Dwarka</div>
+      <div class="area-pill">South Delhi</div>
+      <div class="area-pill">Faridabad</div>
+      <div class="area-pill">Noida Sector 18</div>
+      <div class="area-pill">Greater Noida</div>
+      <div class="area-pill">Indirapuram</div>
+      <div class="area-pill">Vaishali</div>
+      <div class="area-pill">Ghaziabad</div>
+      <div class="area-pill">Vasant Kunj</div>
+      <div class="area-pill">Saket</div>
+      <div class="area-pill">Rohini</div>
+      <div class="area-pill">Lajpat Nagar</div>
+      <div class="area-pill">Connaught Place</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-section">
+  <div class="container" style="max-width:700px; text-align:center;">
+    <h2>AC Not Working?<br>Call Us RIGHT NOW</h2>
+    <p>Don't suffer the heat. Our technician will reach you within 2–4 hours.</p>
+    <div class="cta-buttons">
+      <a href="tel:+918512064371" class="btn-cta-white">📞 +91 85120 64371</a>
+      <a href="https://wa.me/918512064371" target="_blank" class="btn-cta-dark">💬 Chat on WhatsApp</a>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="logo-text">HASNI AC SERVICE</div>
+      <div class="logo-sub" style="margin-top:4px">GURGAON • DELHI NCR • NOIDA • GHAZIABAD</div>
+      <p>Your trusted appliance repair partner. Professional AC service, installation, gas refill, fridge & washing machine repair — available 24/7 across the NCR region.</p>
+    </div>
+    <div>
+      <h4>Services</h4>
+      <ul>
+        <li>AC Service & Cleaning</li>
+        <li>AC Repair</li>
+        <li>Gas Refill</li>
+        <li>AC Installation</li>
+        <li>Fridge Repair</li>
+        <li>Washing Machine Repair</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:+918512064371">📞 +91 85120 64371</a></li>
+        <li><a href="https://wa.me/918512064371">💬 WhatsApp</a></li>
+        <li>🕐 Open 24 Hours / 7 Days</li>
+        <li>📍 Gurgaon & NCR</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>© 2025 Hasni AC Service. All rights reserved.</div>
+    <div>Made for <a href="tel:+918512064371">+91 85120 64371</a></div>
+  </div>
+</footer>
+
+<!-- FLOATING WHATSAPP -->
+<a href="https://wa.me/918512064371" target="_blank" class="float-wa" title="Chat on WhatsApp">💬</a>
+
+<!-- BOOKING MODAL -->
 <div class="modal" id="bookModal">
   <div class="modal-box">
     <div class="modal-head">
-      <h3>Book Your Service Today</h3>
-      <button class="close" id="closeBook">✕</button>
+      <h3>📝 Book Your Service</h3>
+      <button class="modal-close" id="closeBook">✕</button>
     </div>
-
     <div class="modal-body">
-      <div class="info">
-        <div class="chip">📞 Call: +91 8512064371</div>
-        <div class="chip">🕘 Timing: 24/7</div>
-        <div class="chip">✅ AC • Fridge • Washing</div>
+      <div class="chips-row">
+        <div class="chip">📞 +91 8512064371</div>
+        <div class="chip">🕐 24/7 Available</div>
+        <div class="chip">⚡ Same Day</div>
       </div>
-
       <form id="bookingForm">
-        <input type="text" id="name" placeholder="Your Name" required>
-        <input type="tel" id="phone" placeholder="Your Phone Number" required>
-
-        <select id="service" required>
-          <option value="">Select Service</option>
-          <option>AC Service</option>
-          <option>AC Repair</option>
-          <option>AC Installation</option>
-          <option>Gas Refill</option>
-          <option>Fridge Repair</option>
-          <option>Washing Machine Repair</option>
-        </select>
-
-        <textarea id="message" placeholder="Your Problem (optional)"></textarea>
-
-        <button class="submit" type="submit">Submit Booking (WhatsApp)</button>
+        <div class="form-group">
+          <input type="text" id="name" placeholder="Your Name *" required>
+        </div>
+        <div class="form-group">
+          <input type="tel" id="phone" placeholder="Phone Number *" required>
+        </div>
+        <div class="form-group">
+          <select id="service" required>
+            <option value="">Select Service *</option>
+            <option>AC Service & Cleaning — ₹499</option>
+            <option>AC Repair</option>
+            <option>AC Gas Refill — ₹1499</option>
+            <option>AC Installation — ₹999</option>
+            <option>Fridge Repair</option>
+            <option>Washing Machine Repair</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <input type="text" id="area" placeholder="Your Area / Sector">
+        </div>
+        <div class="form-group">
+          <textarea id="message" placeholder="Describe your problem (optional)"></textarea>
+        </div>
+        <button class="btn-submit" type="submit">Send via WhatsApp →</button>
       </form>
-
-      <p style="margin-top:10px;font-size:12px;color:#777;line-height:1.5;">
-        * Submit pe click karte hi WhatsApp open hoga aur message ready rahega.
-      </p>
+      <p class="form-note">* Submit करते ही WhatsApp पर message ready हो जाएगा। Technician 2-4 घंटे में आएगा।</p>
     </div>
   </div>
 </div>
 
 <script>
-  const openBtn = document.getElementById("openBook");
-  const modal = document.getElementById("bookModal");
-  const closeBtn = document.getElementById("closeBook");
+  // Modal logic
+  const modal = document.getElementById('bookModal');
+  const openBtns = [document.getElementById('openBook'), document.getElementById('openBook2')];
+  const closeBtn = document.getElementById('closeBook');
 
-  openBtn.addEventListener("click", (e) => {
+  openBtns.forEach(btn => btn && btn.addEventListener('click', (e) => {
     e.preventDefault();
-    modal.classList.add("show");
+    modal.classList.add('show');
+  }));
+
+  closeBtn.addEventListener('click', () => modal.classList.remove('show'));
+  modal.addEventListener('click', (e) => { if (e.target === modal) modal.classList.remove('show'); });
+
+  // Form submit to WhatsApp
+  document.getElementById('bookingForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const name = document.getElementById('name').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const service = document.getElementById('service').value.trim();
+    const area = document.getElementById('area').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    const text = `Hello Hasni AC Service! 🙏
+
+*New Booking Request*
+👤 Name: ${name}
+📱 Phone: ${phone}
+🔧 Service: ${service}
+📍 Area: ${area || 'Not specified'}
+💬 Problem: ${message || 'Not specified'}
+
+Please confirm the appointment. Thank you!`;
+
+    window.open('https://wa.me/918512064371?text=' + encodeURIComponent(text), '_blank');
   });
 
-  closeBtn.addEventListener("click", () => modal.classList.remove("show"));
+  // Smooth reveal on scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.1 });
 
-  modal.addEventListener("click", (e) => {
-    if(e.target === modal) modal.classList.remove("show");
-  });
-
-  document.getElementById("bookingForm").addEventListener("submit", function(e){
-    e.preventDefault();
-
-    const name = document.getElementById("name").value.trim();
-    const phone = document.getElementById("phone").value.trim();
-    const service = document.getElementById("service").value.trim();
-    const message = document.getElementById("message").value.trim();
-
-    const text =
-`Hello Hasni AC Service,
-Name: ${name}
-Phone: ${phone}
-Service: ${service}
-Problem: ${message || "N/A"}`;
-
-    const url = "https://wa.me/918512064371?text=" + encodeURIComponent(text);
-    window.open(url, "_blank");
+  document.querySelectorAll('.service-card, .why-point, .area-pill').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+    observer.observe(el);
   });
 </script>
-
 </body>
 </html>
-
